@@ -1,0 +1,10 @@
+{% ckan_extends %}
+
+{% block help_register_button %}
+      	   {% if "discourse" in request.url %}
+      	     <a class="btn btn-default btn-register" href="/user/register?came_from={{ request.params.get('came_from') }}">{{ _('Create an Account') }}</a>
+           {% else %}
+             <a class="btn btn-default btn-register" href="/user/register">{{ _('Create an Account') }}</a>
+	   {% endif %}
+{% endblock %}
+	
